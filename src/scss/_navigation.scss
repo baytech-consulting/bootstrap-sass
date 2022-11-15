@@ -1,0 +1,53 @@
+// Variable overrides
+$primary: #002433;
+$secondary: #0D72AA;
+// New variable
+$text: #7A7A7A;
+
+// Navbar Profile Section
+.navbar-list {
+    list-style: none;
+}
+
+
+// Sidebar
+$modal-backdrop-opacity: 0;
+$offcanvas-horizontal-width: 220px;
+$offcanvas-padding-y: 0;
+$offcanvas-padding-x: 0;
+
+$list-group-border-color: none;
+$list-group-border-radius: 0;
+
+$list-group-color: $text;
+$list-group-hover-bg: none;
+$list-group-active-color: $secondary;
+$list-group-action-hover-color: $secondary;
+$list-group-active-bg: none;
+
+.list-group-item-action.active svg [stroke="#7A7A7A"] {
+    stroke: $secondary;
+}
+
+.list-group-item-action:hover svg [stroke="#7A7A7A"] {
+    stroke: $secondary;
+}
+
+.dashboard-item::after {
+    content: '';
+    height: 100%;
+    width: 4px;
+    background: $secondary;
+    border-radius: 4px 0 0 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.dashboard-item:hover::after,
+.dashboard-item:active::after {
+    opacity: 1;
+}
